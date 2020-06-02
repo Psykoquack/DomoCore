@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+option csharp_namespace = "DomoCore.Shared.GrpcProtos";
+
+package web;
+
+service Web{
+	rpc GetInputs (Empty) returns (WebInputReply);
+	rpc GetOutputs (Empty) returns (WebOutputReply);
+}
+
+
+message Empty{
+}
+
+message WebInputReply{
+	int32 Value = 1;
+}
+
+message WebOutputReply{
+	int32 Value = 1;
+}

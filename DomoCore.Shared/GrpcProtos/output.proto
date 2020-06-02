@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+option csharp_namespace = "DomoCore.Shared.GrpcProtos";
+
+package output;
+
+service Output{
+	rpc SetOutputs (OutputValue) returns (OutputReply);
+}
+
+
+message OutputValue{
+	uint32 value = 1;
+}
+
+message OutputReply{
+	bool done = 1;
+}

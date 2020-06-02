@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.29.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="GrpcProtos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\DomoCore.Shared\GrpcProtos\input.proto" GrpcServices="Server">
+      <Link>GrpcProtos\input.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\DomoCore.Shared\GrpcProtos\output.proto" GrpcServices="Client">
+      <Link>GrpcProtos\output.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\DomoCore.Shared\GrpcProtos\web.proto" GrpcServices="Server">
+      <Link>GrpcProtos\web.proto</Link>
+    </Protobuf>
+  </ItemGroup>
+
+</Project>

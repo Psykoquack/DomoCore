@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.128
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomoCore.Engine", "DomoCore.Engine\DomoCore.Engine.csproj", "{2F49307F-88A2-4C95-BDDD-ADC0798BE3CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomoCore.HW", "DomoCore.HW\DomoCore.HW.csproj", "{0C00F388-2B1D-49E2-9FEC-AF2890EE37C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomoCore.Shared", "DomoCore.Shared\DomoCore.Shared.csproj", "{4A356230-4C2F-4942-9D3D-9D57F59EE3DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomoCore.Test", "DomoCore.Test\DomoCore.Test.csproj", "{8460FD38-4E65-4191-93C6-F5051FD59923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomoCore.Web", "DomoCore.Web\DomoCore.Web.csproj", "{84C2A10D-925F-435D-80CE-A4CE935F86BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F49307F-88A2-4C95-BDDD-ADC0798BE3CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F49307F-88A2-4C95-BDDD-ADC0798BE3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F49307F-88A2-4C95-BDDD-ADC0798BE3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F49307F-88A2-4C95-BDDD-ADC0798BE3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C00F388-2B1D-49E2-9FEC-AF2890EE37C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C00F388-2B1D-49E2-9FEC-AF2890EE37C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C00F388-2B1D-49E2-9FEC-AF2890EE37C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C00F388-2B1D-49E2-9FEC-AF2890EE37C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A356230-4C2F-4942-9D3D-9D57F59EE3DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A356230-4C2F-4942-9D3D-9D57F59EE3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A356230-4C2F-4942-9D3D-9D57F59EE3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A356230-4C2F-4942-9D3D-9D57F59EE3DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8460FD38-4E65-4191-93C6-F5051FD59923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8460FD38-4E65-4191-93C6-F5051FD59923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8460FD38-4E65-4191-93C6-F5051FD59923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8460FD38-4E65-4191-93C6-F5051FD59923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C2A10D-925F-435D-80CE-A4CE935F86BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C2A10D-925F-435D-80CE-A4CE935F86BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C2A10D-925F-435D-80CE-A4CE935F86BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C2A10D-925F-435D-80CE-A4CE935F86BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D89DE43-CE77-4B57-83C8-B5AB2035FB8D}
+	EndGlobalSection
+EndGlobal
