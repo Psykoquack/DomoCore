@@ -1,0 +1,164 @@
+<setup>
+    <globalsettings>
+    </globalsettings>
+    <simplecontrols>
+        <simplecontrol>
+            <name>Stookplaats</name>
+            <input>Input1</input>
+            <output>Output1</output>
+	    <alloff>Yes</alloff>	
+        </simplecontrol>
+        <simplecontrol>
+            <name>Wasplaats</name>
+            <input>Input3</input>
+            <output>Output3</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Badkamer</name>
+            <input>Input4</input>
+            <output>Output4</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Toilet</name>
+            <input>Input5</input>
+            <output>Output5</output>
+            <autooff>600</autooff>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Licht Zijdeur</name>
+            <input>Input8</input>
+            <output>Output8</output>
+            <gotime day="monday">Auto Auto</gotime>
+            <gotime day="tuesday">Auto Auto</gotime>
+            <gotime day="wednesday">Auto Auto</gotime>
+            <gotime day="thursday">Auto Auto</gotime>
+            <gotime day="friday">Auto Auto</gotime>
+            <gotime day="saturday">Auto Auto</gotime>
+            <gotime day="sunday">Auto Auto</gotime>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Keuken</name>
+            <input>Input10</input>
+            <output>Output10</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Aanrecht</name>
+            <input>Input11</input>
+            <output>Output11</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>HallBeneden</name>
+            <input>Input13</input>
+            <output>Output13</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Tussenruimte</name>
+            <input>Input1_2</input>
+            <output>Output14</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Test15</name>
+            <input>Input15</input>
+            <output>Output15</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Test16</name>
+            <input>Input16</input>
+            <output>Output16</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Test17</name>
+            <input>Input17</input>
+            <output>Output17</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Test18</name>
+            <input>Input18</input>
+            <output>Output18</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Test19</name>
+            <input>Input19</input>
+            <output>Output19</output>
+        </simplecontrol>
+        <simplecontrol>
+            <name>Test20</name>
+            <input>Input20</input>
+            <output>Output20</output>
+        </simplecontrol>
+    </simplecontrols>
+	<dimmercontrols>
+        <dimmercontrol>
+            <name>Tussenruimte</name>
+            <input>Input2</input>
+            <output>Output2</output>
+        </dimmercontrol>
+	    <dimmercontrol>
+            <name>Eetplaats</name>
+            <input>Input6</input>
+            <output>Output6</output>
+        </dimmercontrol>
+		<dimmercontrol>
+            <name>Zitplaats</name>
+            <input>Input7</input>
+            <output>Output7</output>
+        </dimmercontrol>
+		<dimmercontrol>
+            <name>Bureau</name>
+            <input>Input9</input>
+            <output>Output9</output>
+		</dimmercontrol>
+	</dimmercontrols>
+    <sensorcontrols>
+        <sensorcontrol>
+            <name>Test12</name>
+            <input>Input12</input>
+            <output>Output12</output>
+            <autooff>600</autooff>
+        </sensorcontrol>
+    </sensorcontrols>
+    <shuttercontrols>
+        <shuttercontrol>
+            <name>Groot rolluik</name>
+            <input>Input24</input>
+            <outputpower>Output24</outputpower>
+            <outputdirection>Output23</outputdirection>
+            <runtime>30</runtime>
+            <gotime day="monday">Auto Auto</gotime>
+            <gotime day="tuesday">Auto Auto</gotime>
+            <gotime day="wednesday">Auto Auto</gotime>
+            <gotime day="thursday">Auto Auto</gotime>
+            <gotime day="friday">Auto Auto</gotime>
+            <gotime day="saturday">Manual Auto</gotime>
+            <gotime day="sunday">Manual Auto</gotime>
+        </shuttercontrol>
+        <shuttercontrol>
+            <name>Klein rolluik</name>
+            <input>Input23</input>
+            <outputpower>Output22</outputpower>
+            <outputdirection>Output21</outputdirection>
+            <runtime>30</runtime>
+            <gotime day="monday">Auto Auto</gotime>
+            <gotime day="tuesday">Auto Auto</gotime>
+            <gotime day="wednesday">Auto Auto</gotime>
+            <gotime day="thursday">Auto Auto</gotime>
+            <gotime day="friday">Auto Auto</gotime>
+            <gotime day="saturday">Manual Auto</gotime>
+            <gotime day="sunday">Manual Auto</gotime>
+        </shuttercontrol>
+        <shuttercontrol>
+            <name>Bureau rolluik</name>
+            <input>Input1_4</input>
+            <outputpower>Output20</outputpower>
+            <outputdirection>Output19</outputdirection>
+            <runtime>30</runtime>
+            <gotime day="monday">Auto Auto</gotime>
+            <gotime day="tuesday">Auto Auto</gotime>
+            <gotime day="wednesday">Auto Auto</gotime>
+            <gotime day="thursday">Auto Auto</gotime>
+            <gotime day="friday">Auto Auto</gotime>
+            <gotime day="saturday">Manual Auto</gotime>
+            <gotime day="sunday">Manual Auto</gotime>
+        </shuttercontrol>
+    </shuttercontrols>
+</setup>

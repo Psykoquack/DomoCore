@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomoCore.Shared", "DomoCore
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomoCore.Test", "DomoCore.Test\DomoCore.Test.csproj", "{8460FD38-4E65-4191-93C6-F5051FD59923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomoCore.Web", "DomoCore.Web\DomoCore.Web.csproj", "{84C2A10D-925F-435D-80CE-A4CE935F86BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomoCore.Web", "DomoCore.Web\DomoCore.Web.csproj", "{84C2A10D-925F-435D-80CE-A4CE935F86BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,5 @@
 ﻿using DomoCore.Engine.Classes;
+using DomoCore.Engine.Data;
 using DomoCore.Shared.GrpcProtos;
 using Grpc.Net.Client;
 using Microsoft.AspNetCore.Hosting;
@@ -31,7 +32,7 @@ namespace DomoCore.Engine.Services
 
         public Task StartAsync(CancellationToken stopToken)
         {
-            DomoEngine engine = new DomoEngine(logger);
+            DomoEngine engine = new DomoEngine();
 
             Task.Run(() => engine.EngineLogic(stopToken));
 
