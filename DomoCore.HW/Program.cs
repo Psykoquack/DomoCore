@@ -25,6 +25,7 @@ namespace DomoCore.HW
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("https://*:5001");
                 })
                 .ConfigureServices(services =>
                 {

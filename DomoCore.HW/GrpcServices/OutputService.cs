@@ -23,5 +23,11 @@ namespace DomoCore.HW.GrpcServices
             hwInterface.SetOutputs(value.Value);
             return Task.FromResult(new OutputReply { Done = true });
         }
+
+
+        public override Task<OutputReply> KeepOutputAlive(KeepOutputAliveMessage message, ServerCallContext context)
+        {
+            return Task.FromResult(new OutputReply { Done = true });
+        }
     }
 }

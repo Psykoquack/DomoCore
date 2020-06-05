@@ -5,11 +5,16 @@ package input;
 
 service Input{
 	rpc ReportInputs (InputValue) returns (InputReply);
+	rpc KeepInputAlive (KeepInputAliveMessage) returns (InputReply);
 }
 
+message KeepInputAliveMessage{
+	string sender = 1;
+}
 
 message InputValue{
 	uint32 value = 1;
+	string sender = 2;
 }
 
 message InputReply{

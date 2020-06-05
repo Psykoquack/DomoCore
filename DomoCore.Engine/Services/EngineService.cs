@@ -20,11 +20,13 @@ namespace DomoCore.Engine.Services
     {
 
         private readonly ILogger<EngineService> logger;
+        private readonly DomoEngine domoEngine;
 
         // Constructors
-        public EngineService(ILogger<EngineService> logger)
+        public EngineService(ILogger<EngineService> logger, DomoEngine domoEngine)
         {
             this.logger = logger;
+            this.domoEngine = domoEngine;
         }
 
         // Methods
@@ -32,9 +34,9 @@ namespace DomoCore.Engine.Services
 
         public Task StartAsync(CancellationToken stopToken)
         {
-            DomoEngine engine = new DomoEngine();
+            //DomoEngine engine = new DomoEngine();
 
-            Task.Run(() => engine.EngineLogic(stopToken));
+            Task.Run(() => domoEngine.EngineLogic(stopToken));
 
             return Task.CompletedTask;
         }

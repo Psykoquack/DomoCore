@@ -18,6 +18,7 @@ namespace DomoCore.Engine.Data
         public DbSet<ShutterOutput> ShutterOutputs { get; set; }
         public DbSet<SimpleOutput> SimpleOutputs { get; set; }
         public DbSet<SwitchTime> SwitchTimes { get; set; }
+        public DbSet<Device> Devices { get; set; }
 
         public DomoCoreInMemDbContext(DbContextOptions options)
             : base(options)
@@ -29,7 +30,14 @@ namespace DomoCore.Engine.Data
         {
             modelBuilder
                 .Entity<Input>()
-                .Property(e => e.State)
+                .Property(e => e.CurrentState)
+                .HasConversion(
+                    v => v.ToString(),
+                    v => (InputState)Enum.Parse(typeof(InputState), v));
+
+            modelBuilder
+                .Entity<Input>()
+                .Property(e => e.PreviousState)
                 .HasConversion(
                     v => v.ToString(),
                     v => (InputState)Enum.Parse(typeof(InputState), v));

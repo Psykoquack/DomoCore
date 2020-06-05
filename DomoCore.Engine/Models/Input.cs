@@ -16,6 +16,10 @@ namespace DomoCore.Engine.Models
     {
         public int Id { get; set; }
         public int HWValue { get; set; }
-        public InputState State { get; set; }
+        public Device Device { get; set; }
+        public int DeviceId { get; set; }
+        public InputState CurrentState { get; set; }
+        public InputState PreviousState { get; set; }
+        public bool Changed { get; set; }
     }
 }

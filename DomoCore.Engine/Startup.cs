@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DomoCore.Engine.Classes;
 using DomoCore.Engine.Data;
 using DomoCore.Engine.GrpcServices;
 using Microsoft.AspNetCore.Builder;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace DomoCore.Engine
 {
@@ -20,6 +22,7 @@ namespace DomoCore.Engine
         {
             services.AddGrpc();
             services.AddSingleton<InMemDbContextFactory>();
+            services.AddSingleton<DomoEngine>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

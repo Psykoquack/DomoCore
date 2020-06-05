@@ -5,8 +5,13 @@ package output;
 
 service Output{
 	rpc SetOutputs (OutputValue) returns (OutputReply);
+	rpc KeepOutputAlive (KeepOutputAliveMessage) returns (OutputReply);
 }
 
+
+message KeepOutputAliveMessage{
+	string receiver = 1;
+}
 
 message OutputValue{
 	uint32 value = 1;

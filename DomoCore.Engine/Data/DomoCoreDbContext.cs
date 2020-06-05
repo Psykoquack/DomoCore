@@ -18,6 +18,7 @@ namespace DomoCore.Engine.Data
         public DbSet<ShutterOutput> ShutterOutputs { get; set; }
         public DbSet<SimpleOutput> SimpleOutputs { get; set; }
         public DbSet<SwitchTime> SwitchTimes { get; set; }
+        public DbSet<Device> Devices { get; set; }
 
         public DomoCoreDbContext()
         {
@@ -40,7 +41,14 @@ namespace DomoCore.Engine.Data
             #region EnumToStringConversion
             modelBuilder
                 .Entity<Input>()
-                .Property(e => e.State)
+                .Property(e => e.CurrentState)
+                .HasConversion(
+                    v => v.ToString(),
+                    v => (InputState)Enum.Parse(typeof(InputState), v));
+
+            modelBuilder
+                .Entity<Input>()
+                .Property(e => e.PreviousState)
                 .HasConversion(
                     v => v.ToString(),
                     v => (InputState)Enum.Parse(typeof(InputState), v));
@@ -82,30 +90,62 @@ namespace DomoCore.Engine.Data
             #endregion EnumToStringConversion
 
             #region TestData
+
+            List<Input> inputs = new List<Input>();
+            for (int i = 0; i < 32; i++)
+            {
+                inputs.Add(new Input
+                {
+                    Id = i + 1,
+                    CurrentState = InputState.Released,
+                    PreviousState = InputState.Released,
+                    HWValue = 0x00000001 << i,
+                    Changed = false,
+                    DeviceId = 1 });
+            }
             modelBuilder
                 .Entity<Input>()
-                .HasData(
-                    new Input { Id = 1, State = InputState.Released, HWValue = 0x00000001},
-                    new Input { Id = 2, State = InputState.Released, HWValue = 0x00000002}
-                );
+                .HasData(inputs);
 
+            List<Output> outputs = new List<Output>();
+            int counter = 1;
+            for (int j = 1; j <= 4; j++)
+            {
+                uint mask = (uint)(0x00000001 << ((j * 8)-1));
+
+                for (int i = 0; i < 8; i++)
+                {
+                    outputs.Add(new Output
+                    {
+                        Id = counter,
+                        DeviceId = 1,
+                        State = OutputState.Off,
+                        HWValue = (int)(mask >> i),
+                        Changed = false
+                    });
+                    counter++;
+                }
+            }
             modelBuilder
                 .Entity<Output>()
-                .HasData(
-                    new Output { Id = 1, Name = "Licht 1", State = OutputState.Off, HWValue = 0x00000001 },
-                    new Output { Id = 2, Name = "Licht 2", State = OutputState.Off, HWValue = 0x00000002 }
-                    );
+                .HasData(outputs);
 
             modelBuilder
                 .Entity<SimpleOutput>()
                 .HasData(
-                    new SimpleOutput { Id = 1, Name = "Licht 1", State = SimpleOutputState.Off, AutoOff = false, InputId = 2, OutputId = 1 }
+                    new SimpleOutput { Id = 1, Name = "Licht 1", State = SimpleOutputState.Off, AutoOff = false, InputId = 1, OutputId = 1 }
                 );
 
             modelBuilder
                 .Entity<SimpleOutput>()
                 .HasData(
-                    new SimpleOutput { Id = 2, Name = "Licht 2", State = SimpleOutputState.Off, AutoOff = false, InputId = 1, OutputId = 2 }
+                    new SimpleOutput { Id = 2, Name = "Licht 2", State = SimpleOutputState.Off, AutoOff = false, InputId = 2, OutputId = 2 }
+                );
+
+            modelBuilder
+                .Entity<Device>()
+                .HasData(
+                    new Device { Id = 1, Address = "192.168.0.236", Name = "Domo1" }
                 );
             #endregion TestData
         }
