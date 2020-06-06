@@ -101,7 +101,8 @@ namespace DomoCore.Engine.Data
                     PreviousState = InputState.Released,
                     HWValue = 0x00000001 << i,
                     Changed = false,
-                    DeviceId = 1 });
+                    DeviceId = 1
+                });
             }
             modelBuilder
                 .Entity<Input>()
@@ -111,7 +112,7 @@ namespace DomoCore.Engine.Data
             int counter = 1;
             for (int j = 1; j <= 4; j++)
             {
-                uint mask = (uint)(0x00000001 << ((j * 8)-1));
+                uint mask = (uint)(0x00000001 << ((j * 8) - 1));
 
                 for (int i = 0; i < 8; i++)
                 {
@@ -140,6 +141,18 @@ namespace DomoCore.Engine.Data
                 .Entity<SimpleOutput>()
                 .HasData(
                     new SimpleOutput { Id = 2, Name = "Licht 2", State = SimpleOutputState.Off, AutoOff = false, InputId = 2, OutputId = 2 }
+                );
+
+             modelBuilder
+                .Entity<SimpleOutput>()
+                .HasData(
+                    new SimpleOutput { Id = 3, Name = "Licht 3", State = SimpleOutputState.Off, AutoOff = false, InputId = 3, OutputId = 3 }
+                );
+
+            modelBuilder
+                .Entity<SimpleOutput>()
+                .HasData(
+                     new SimpleOutput { Id = 4, Name = "Licht 4", State = SimpleOutputState.Off, AutoOff = false, InputId = 4, OutputId = 4 }
                 );
 
             modelBuilder

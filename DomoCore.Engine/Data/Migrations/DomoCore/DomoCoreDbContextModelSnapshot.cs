@@ -802,6 +802,26 @@ namespace DomoCore.Engine.Data.Migrations.DomoCore
                             Name = "Licht 2",
                             OutputId = 2,
                             State = "Off"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AutoOff = false,
+                            AutoOffTimeSecs = 0,
+                            InputId = 3,
+                            Name = "Licht 3",
+                            OutputId = 3,
+                            State = "Off"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AutoOff = false,
+                            AutoOffTimeSecs = 0,
+                            InputId = 4,
+                            Name = "Licht 4",
+                            OutputId = 4,
+                            State = "Off"
                         });
                 });
 

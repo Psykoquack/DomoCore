@@ -1,16 +1,22 @@
 ﻿@page "/counter"
 
-<h1>Counter</h1>
+<h1>Switch test</h1>
 
-<p>Current count: @currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="(() => IncrementCount(0x00000001))">Green</button>
+<button class="btn btn-primary" @onclick="(() => IncrementCount(0x00000002))">Yellow</button>
+<button class="btn btn-primary" @onclick="(() => IncrementCount(0x00000004))">White</button>
+<button class="btn btn-primary" @onclick="(() => IncrementCount(0x00000008))">Red</button>
 
-@code {
+@code 
+{
+    [Inject]
+    public StateManagement state { get; set; }
+
     private int currentCount = 0;
 
-    private void IncrementCount()
+    private async Task IncrementCount(int value)
     {
-        currentCount++;
+        await state.PressButton((uint)value);
     }
 }

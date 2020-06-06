@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DomoCore.Engine.Data.Migrations.DomoCore
 {
     [DbContext(typeof(DomoCoreDbContext))]
-    [Migration("20200604144714_Initial")]
+    [Migration("20200605122032_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -803,6 +803,26 @@ namespace DomoCore.Engine.Data.Migrations.DomoCore
                             InputId = 2,
                             Name = "Licht 2",
                             OutputId = 2,
+                            State = "Off"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AutoOff = false,
+                            AutoOffTimeSecs = 0,
+                            InputId = 3,
+                            Name = "Licht 3",
+                            OutputId = 3,
+                            State = "Off"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AutoOff = false,
+                            AutoOffTimeSecs = 0,
+                            InputId = 4,
+                            Name = "Licht 4",
+                            OutputId = 4,
                             State = "Off"
                         });
                 });

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using DomoCore.Web.Data;
+using DomoCore.Web.Services;
 
 namespace DomoCore.Web
 {
@@ -26,9 +27,11 @@ namespace DomoCore.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddGrpc();
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<StateManagement>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

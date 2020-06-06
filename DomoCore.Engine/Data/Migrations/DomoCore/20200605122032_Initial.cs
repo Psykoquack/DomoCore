@@ -559,6 +559,16 @@ namespace DomoCore.Engine.Data.Migrations.DomoCore
                 columns: new[] { "Id", "AutoOff", "AutoOffTimeSecs", "InputId", "Name", "OutputId", "State" },
                 values: new object[] { 2, false, 0, 2, "Licht 2", 2, "Off" });
 
+            migrationBuilder.InsertData(
+                table: "SimpleOutputs",
+                columns: new[] { "Id", "AutoOff", "AutoOffTimeSecs", "InputId", "Name", "OutputId", "State" },
+                values: new object[] { 3, false, 0, 3, "Licht 3", 3, "Off" });
+
+            migrationBuilder.InsertData(
+                table: "SimpleOutputs",
+                columns: new[] { "Id", "AutoOff", "AutoOffTimeSecs", "InputId", "Name", "OutputId", "State" },
+                values: new object[] { 4, false, 0, 4, "Licht 4", 4, "Off" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_FollowerOutputs_InputId",
                 table: "FollowerOutputs",
